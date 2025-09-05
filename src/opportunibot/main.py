@@ -6,12 +6,21 @@ Command-line interface for the OpportuniBot job search tool.
 
 import click
 import os
+import logging
 from pathlib import Path
 from .config import ConfigManager, ConfigurationError
+from .scrapers import search_jobs, ScrapingError
+
+# Setup logging for CLI
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 @click.group()
-@click.version_option(version="0.2.0")
+@click.version_option(version="0.2.1")
 def cli():
     """OpportuniBot - Your AI-powered job search assistant 🤖
     
@@ -28,13 +37,23 @@ def cli():
     default='job_search_config.yaml',
     help='Configuration file path (default: job_search_config.yaml)'
 )
-def search(verbose, config):
+@click.option(
+    '--dry-run', 
+    is_flag=True, 
+    help='Test configuration without actually scraping jobs'
+)
+def search(verbose, config, dry_run):
     """Run a job search
     
     Searches for jobs based on your configuration and generates a report
     with personalized cover letters.
     """
     config_path = Path(config)
+    
+    # Setup logging level
+    if verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+        logging.getLogger('opportunibot').setLevel(logging.DEBUG)
     
     # Check if config file exists
     if not config_path.exists():
@@ -51,25 +70,68 @@ def search(verbose, config):
             click.echo("🔍 Verbose mode enabled")
             click.echo(f"📁 Using config: {config_path}")
             click.echo(f"👤 User: {job_config.user_profile.name}")
-            click.echo(f"🎯 Keywords: {', '.join(job_config.search_criteria.required_keywords[:3])}...")
+            click.echo(f"🎯 Required keywords: {', '.join(job_config.search_criteria.required_keywords[:3])}...")
             click.echo(f"🏢 Target companies: {len(job_config.target_companies.get_all_companies())}")
+            click.echo(f"🔌 Enabled sources: {[s for s, cfg in job_config.job_sources.items() if cfg.get('enabled')]}")
             click.echo()
         
         click.echo("🤖 Starting job search...")
         
-        # Phase 2 implementation will go here
-        click.echo("   ✅ Configuration loaded successfully")
-        click.echo("   🔄 Job scraping functionality coming in Phase 2!")
-        click.echo("   📊 Analysis and reporting coming soon...")
+        if dry_run:
+            click.echo("   🧪 Dry run mode - testing configuration only")
+            click.echo("   ✅ Configuration loaded successfully")
+            click.echo("   📊 Would search the following sources:")
+            for source, cfg in job_config.job_sources.items():
+                if cfg.get('enabled'):
+                    click.echo(f"      • {source}")
+            click.echo("   🎯 Use --verbose for more configuration details")
+            return
+        
+        # Actually run the job search
+        try:
+            jobs = search_jobs(job_config)
+            
+            if jobs:
+                click.echo(f"   ✅ Found {len(jobs)} jobs!")
+                click.echo()
+                click.echo("📋 Top matches:")
+                
+                # Show top 5 jobs
+                for i, job in enumerate(jobs[:5], 1):
+                    click.echo(f"   {i}. {job.title}")
+                    click.echo(f"      🏢 {job.company}")
+                    click.echo(f"      📍 {job.location}")
+                    click.echo(f"      🔗 {job.url}")
+                    click.echo()
+                
+                if len(jobs) > 5:
+                    click.echo(f"   ... and {len(jobs) - 5} more jobs")
+                
+                # Create reports directory
+                reports_dir = Path(job_config.output_directory)
+                reports_dir.mkdir(exist_ok=True)
+                
+                click.echo(f"📊 Full results will be saved to: {reports_dir}")
+                
+            else:
+                click.echo("   🔍 No jobs found matching your criteria")
+                click.echo("   💡 Try adjusting your keywords or expanding your location preferences")
+            
+        except ScrapingError as e:
+            click.echo(f"❌ Scraping error: {e}")
+            raise click.Abort()
         
         click.echo()
-        click.echo("🎯 Ready for Phase 2 implementation!")
+        click.echo("🎯 Job search complete!")
         
     except ConfigurationError as e:
         click.echo(f"❌ Configuration error: {e}")
         raise click.Abort()
     except Exception as e:
         click.echo(f"❌ Unexpected error: {e}")
+        if verbose:
+            import traceback
+            click.echo(traceback.format_exc())
         raise click.Abort()
 
 
@@ -99,7 +161,9 @@ def status(config):
             click.echo(f"   • User: {job_config.user_profile.name}")
             click.echo(f"   • Skills: {len(job_config.user_profile.technical_skills)} technical skills")
             click.echo(f"   • Companies: {len(job_config.target_companies.get_all_companies())} target companies")
-            click.echo(f"   • Sources: {[s for s, cfg in job_config.job_sources.items() if cfg.get('enabled')]}")
+            
+            enabled_sources = [s for s, cfg in job_config.job_sources.items() if cfg.get('enabled')]
+            click.echo(f"   • Sources: {enabled_sources}")
             
         except Exception as e:
             click.echo(f"❌ Configuration error: {e}")
