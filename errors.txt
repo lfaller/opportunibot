@@ -1,0 +1,36 @@
+2025-09-05 15:50:42,464 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for moderna: Failed to fetch https://boards-api.greenhouse.io/v1/boards/moderna/jobs after 3 attempts
+2025-09-05 15:50:42,464 - opportunibot.greenhouse_scraper - ERROR - Error scraping moderna: Failed to fetch https://boards-api.greenhouse.io/v1/boards/moderna/jobs after 3 attempts
+2025-09-05 15:50:44,429 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for recursion: Failed to fetch https://boards-api.greenhouse.io/v1/boards/recursion/jobs after 3 attempts
+2025-09-05 15:50:44,429 - opportunibot.greenhouse_scraper - ERROR - Error scraping recursion: Failed to fetch https://boards-api.greenhouse.io/v1/boards/recursion/jobs after 3 attempts
+2025-09-05 15:50:48,468 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for twist-bioscience: Failed to fetch https://boards-api.greenhouse.io/v1/boards/twist-bioscience/jobs after 3 attempts
+2025-09-05 15:50:48,468 - opportunibot.greenhouse_scraper - ERROR - Error scraping twist-bioscience: Failed to fetch https://boards-api.greenhouse.io/v1/boards/twist-bioscience/jobs after 3 attempts
+2025-09-05 15:50:50,433 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for 10x-genomics: Failed to fetch https://boards-api.greenhouse.io/v1/boards/10x-genomics/jobs after 3 attempts
+2025-09-05 15:50:50,433 - opportunibot.greenhouse_scraper - ERROR - Error scraping 10x-genomics: Failed to fetch https://boards-api.greenhouse.io/v1/boards/10x-genomics/jobs after 3 attempts
+2025-09-05 15:50:52,436 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for illumina: Failed to fetch https://boards-api.greenhouse.io/v1/boards/illumina/jobs after 3 attempts
+2025-09-05 15:50:52,436 - opportunibot.greenhouse_scraper - ERROR - Error scraping illumina: Failed to fetch https://boards-api.greenhouse.io/v1/boards/illumina/jobs after 3 attempts
+2025-09-05 15:50:54,450 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for pacific-biosciences: Failed to fetch https://boards-api.greenhouse.io/v1/boards/pacific-biosciences/jobs after 3 attempts
+2025-09-05 15:50:54,450 - opportunibot.greenhouse_scraper - ERROR - Error scraping pacific-biosciences: Failed to fetch https://boards-api.greenhouse.io/v1/boards/pacific-biosciences/jobs after 3 attempts
+2025-09-05 15:50:56,452 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for dnanexus: Failed to fetch https://boards-api.greenhouse.io/v1/boards/dnanexus/jobs after 3 attempts
+2025-09-05 15:50:56,452 - opportunibot.greenhouse_scraper - ERROR - Error scraping dnanexus: Failed to fetch https://boards-api.greenhouse.io/v1/boards/dnanexus/jobs after 3 attempts
+2025-09-05 15:50:58,452 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for tempus: Failed to fetch https://boards-api.greenhouse.io/v1/boards/tempus/jobs after 3 attempts
+2025-09-05 15:50:58,452 - opportunibot.greenhouse_scraper - ERROR - Error scraping tempus: Failed to fetch https://boards-api.greenhouse.io/v1/boards/tempus/jobs after 3 attempts
+2025-09-05 15:51:00,454 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for flatiron-health: Failed to fetch https://boards-api.greenhouse.io/v1/boards/flatiron-health/jobs after 3 attempts
+2025-09-05 15:51:00,454 - opportunibot.greenhouse_scraper - ERROR - Error scraping flatiron-health: Failed to fetch https://boards-api.greenhouse.io/v1/boards/flatiron-health/jobs after 3 attempts
+2025-09-05 15:51:04,464 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for guardant-health: Failed to fetch https://boards-api.greenhouse.io/v1/boards/guardant-health/jobs after 3 attempts
+2025-09-05 15:51:04,464 - opportunibot.greenhouse_scraper - ERROR - Error scraping guardant-health: Failed to fetch https://boards-api.greenhouse.io/v1/boards/guardant-health/jobs after 3 attempts
+2025-09-05 15:51:06,475 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for exact-sciences: Failed to fetch https://boards-api.greenhouse.io/v1/boards/exact-sciences/jobs after 3 attempts
+2025-09-05 15:51:06,475 - opportunibot.greenhouse_scraper - ERROR - Error scraping exact-sciences: Failed to fetch https://boards-api.greenhouse.io/v1/boards/exact-sciences/jobs after 3 attempts
+2025-09-05 15:51:08,471 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for openai: Failed to fetch https://boards-api.greenhouse.io/v1/boards/openai/jobs after 3 attempts
+2025-09-05 15:51:08,471 - opportunibot.greenhouse_scraper - ERROR - Error scraping openai: Failed to fetch https://boards-api.greenhouse.io/v1/boards/openai/jobs after 3 attempts
+2025-09-05 15:51:12,482 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for scale: Failed to fetch https://boards-api.greenhouse.io/v1/boards/scale/jobs after 3 attempts
+2025-09-05 15:51:12,482 - opportunibot.greenhouse_scraper - ERROR - Error scraping scale: Failed to fetch https://boards-api.greenhouse.io/v1/boards/scale/jobs after 3 attempts
+2025-09-05 15:51:14,486 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for huggingface: Failed to fetch https://boards-api.greenhouse.io/v1/boards/huggingface/jobs after 3 attempts
+2025-09-05 15:51:14,486 - opportunibot.greenhouse_scraper - ERROR - Error scraping huggingface: Failed to fetch https://boards-api.greenhouse.io/v1/boards/huggingface/jobs after 3 attempts
+2025-09-05 15:51:18,494 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for snowflake: Failed to fetch https://boards-api.greenhouse.io/v1/boards/snowflake/jobs after 3 attempts
+2025-09-05 15:51:18,494 - opportunibot.greenhouse_scraper - ERROR - Error scraping snowflake: Failed to fetch https://boards-api.greenhouse.io/v1/boards/snowflake/jobs after 3 attempts
+2025-09-05 15:51:26,504 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for notion: Failed to fetch https://boards-api.greenhouse.io/v1/boards/notion/jobs after 3 attempts
+2025-09-05 15:51:26,504 - opportunibot.greenhouse_scraper - ERROR - Error scraping notion: Failed to fetch https://boards-api.greenhouse.io/v1/boards/notion/jobs after 3 attempts
+2025-09-05 15:51:36,529 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for linear: Failed to fetch https://boards-api.greenhouse.io/v1/boards/linear/jobs after 3 attempts
+2025-09-05 15:51:36,529 - opportunibot.greenhouse_scraper - ERROR - Error scraping linear: Failed to fetch https://boards-api.greenhouse.io/v1/boards/linear/jobs after 3 attempts
+2025-09-05 15:51:46,556 - opportunibot.greenhouse_scraper - ERROR - Failed to fetch jobs for teladoc: Failed to fetch https://boards-api.greenhouse.io/v1/boards/teladoc/jobs after 3 attempts
+2025-09-05 15:51:46,556 - opportunibot.greenhouse_scraper - ERROR - Error scraping teladoc: Failed to fetch https://boards-api.greenhouse.io/v1/boards/teladoc/jobs after 3 attempts

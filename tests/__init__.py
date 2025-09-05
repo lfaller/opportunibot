@@ -1,0 +1,3 @@
+"""
+OpportuniBot test suite
+"""
