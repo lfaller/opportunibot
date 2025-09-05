@@ -5,16 +5,7 @@ All notable changes to OpportuniBot will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-### Planned for v1.2.0 (Phase 2)
-- Job scraping from Greenhouse ATS
-- Job scraping from Lever ATS  
-- Basic Indeed job board integration
-- Job deduplication and filtering
-- Initial keyword matching algorithm
-
-## [1.1.0] - 2024-12-19
+## [0.2.0] - 2025-09-05
 
 ### Added - Phase 1 Complete: Foundation & CLI Framework
 - **CLI Framework**: Complete command-line interface using Click
@@ -65,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Status Checking**: Real-time configuration validation and system status
 - **Verbose Mode**: Detailed output for debugging and development
 
-## [1.0.0] - 2024-12-19
+## [0.1.0] - 2025-09-05
 
 ### Added - Initial Project Setup
 - **Repository Structure**: Basic GitHub repository with README
@@ -78,33 +69,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Core**: Click, PyYAML, requests, beautifulsoup4
 - **Development**: pytest, black, flake8, mypy, isort
 - **Future**: reportlab (PDF generation), additional scraping libraries
-
----
-
-## Version History Summary
-
-- **v1.1.0**: Complete CLI framework and configuration system (Phase 1) ✅
-- **v1.0.0**: Initial project setup and foundation
-
-## Development Phases
-
-### ✅ Phase 1 (v1.1.0) - Foundation & CLI Framework
-Complete CLI interface, configuration system, and data models.
-
-### 🔄 Phase 2 (v1.2.0) - Job Scraping Implementation
-Multi-source job discovery and basic filtering.
-
-### 📋 Phase 3 (v1.3.0) - Job Analysis & Matching
-Intelligent job scoring and relevance algorithms.
-
-### 📝 Phase 4 (v1.4.0) - Cover Letter Generation
-Dynamic, personalized cover letter creation.
-
-### 📊 Phase 5 (v1.5.0) - PDF Reporting
-Professional reports with job summaries and cover letters.
-
-### 🐳 Phase 6 (v1.6.0) - Production Deployment
-Docker containerization and production-ready features.
-
-### 🚀 Phase 7 (v2.0.0) - Advanced Features
-Web interface, machine learning improvements, and enterprise features.
