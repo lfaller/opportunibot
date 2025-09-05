@@ -8,6 +8,51 @@ OpportuniBot is an automated job search tool that scrapes job boards and company
 
 ## 🚀 Quick Start
 
+## 📋 Versioning
+
+OpportuniBot follows [Semantic Versioning](https://semver.org/) (SemVer) with a phase-based development approach:
+
+### Version Format: `MAJOR.MINOR.PATCH`
+
+- **MAJOR** version: Incompatible API changes or complete rewrites
+- **MINOR** version: New features and phase completions (backward compatible)
+- **PATCH** version: Bug fixes and small improvements (backward compatible)
+
+### Development Phases
+
+- **v1.0.x**: Initial setup and project foundation
+- **v1.1.x**: Phase 1 - CLI framework and configuration system ✅
+- **v1.2.x**: Phase 2 - Job scraping implementation (In Progress)
+- **v1.3.x**: Phase 3 - Job analysis and matching algorithms
+- **v1.4.x**: Phase 4 - Cover letter generation
+- **v1.5.x**: Phase 5 - PDF reporting system
+- **v1.6.x**: Phase 6 - Docker deployment and production features
+- **v2.0.x**: Major feature additions (web interface, ML improvements)
+
+### Managing Versions
+
+OpportuniBot uses Poetry for version management:
+
+```bash
+# Check current version
+poetry version
+
+# Bump version types
+poetry version patch    # Bug fixes (1.1.0 -> 1.1.1)
+poetry version minor    # New features (1.1.0 -> 1.2.0)
+poetry version major    # Breaking changes (1.1.0 -> 2.0.0)
+
+# Set specific version
+poetry version 1.2.0
+```
+
+### Current Status
+
+**Latest Release**: v1.1.0 - Phase 1 Complete  
+**Next Target**: v1.2.0 - Job Scraping Implementation
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed release notes and [GitHub Releases](https://github.com/yourusername/opportunibot/releases) for version downloads.
+
 ### Prerequisites
 
 - Python 3.10+
