@@ -28,6 +28,29 @@ poetry install
 
 ### Usage
 
+```bash
+poetry run python -m opportunibot --help
+```
+
+Will output:
+
+```
+Usage: python -m opportunibot [OPTIONS] COMMAND [ARGS]...
+
+  OpportuniBot - Your AI-powered job search assistant 🤖
+
+  OpportuniBot automates job searching by scraping job boards, analyzing job
+  fit, and generating personalized cover letters.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  config  Configuration management
+  search  Run a job search
+```
+
 #### Basic Job Search
 
 #### Scheduled Searches
